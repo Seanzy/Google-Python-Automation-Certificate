@@ -1,2 +1,2 @@
-# Google-Python-Automation-Certificate
-A practice repo while completing my Google IT Automation with Python Professional Certificate Online Course 
+9/29/20 Practicing
+Learned about using the Counter to get a mini histogram dictionary from a list. 
