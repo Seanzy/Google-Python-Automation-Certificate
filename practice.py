@@ -272,10 +272,46 @@
 # print(is_palindrome("abc")) # Should be False
 # print(is_palindrome("kayak")) # Should be True
 
-print("string1 string2 string3".rindex('string'))
+# print("string1 string2 string3".rindex('string'))
+
+fruits = ['apple', 'pear', 'banana']
+# fruits.append('kiwi')
+# print(fruits)
+# fruits.insert(2, 'plum')
+# print(fruits)
+# fruits.remove('plum')
+# print(fruits)
+# print(fruits.pop(3))
+# print(fruits)
+
+# newList = []
+# i = 0
+# for fruit in fruits:
+#   if i % 2 == 0: 
+#     newlist.append(fruit)
+#     i += 1
+# print(newList)
 
 
+def skip_elements(elements):
+  # Initialize variables
+  new_list = []
+  i = 0
 
+  # Iterate through the list
+  for el in elements:
+    # Does this element belong in the resulting list?
+    if i % 2 == 0:  
+      # Add this element to the resulting list
+      new_list.append(el)
+    # Increment i
+    i += 1
 
+  return new_list
 
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements([])) # Should be []
 
+# 9/30/20
+# Tuples are sequences of elements of any type that are immutable and are made by a comma. They are good when you don't want the data to be modified, or where each position has meaning, like (firstname, mid initial, last name)
