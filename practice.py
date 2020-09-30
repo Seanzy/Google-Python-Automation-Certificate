@@ -293,25 +293,116 @@ fruits = ['apple', 'pear', 'banana']
 # print(newList)
 
 
-def skip_elements(elements):
-  # Initialize variables
-  new_list = []
-  i = 0
+# def skip_elements(elements):
+#   # Initialize variables
+#   new_list = []
+#   i = 0
 
-  # Iterate through the list
-  for el in elements:
-    # Does this element belong in the resulting list?
-    if i % 2 == 0:  
-      # Add this element to the resulting list
-      new_list.append(el)
-    # Increment i
-    i += 1
+#   # Iterate through the list
+#   for el in elements:
+#     # Does this element belong in the resulting list?
+#     if i % 2 == 0:  
+#       # Add this element to the resulting list
+#       new_list.append(el)
+#     # Increment i
+#     i += 1
 
-  return new_list
+#   return new_list
 
-print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
-print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
-print(skip_elements([])) # Should be []
+# print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+# print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
+# print(skip_elements([])) # Should be []
 
 # 9/30/20
-# Tuples are sequences of elements of any type that are immutable and are made by a comma. They are good when you don't want the data to be modified, or where each position has meaning, like (firstname, mid initial, last name)
+# Tuples are sequences of elements of any type that are immutable and are made by a comma. They are good when you don't want the data to be modified, or where each position has meaning, like (firstname, mid initial, last name). We use it to keep data together that has more than one value
+
+# Using enumerate to copy above function
+# def skip_elements(elements):
+#   new_list = []
+
+#   for i, el in enumerate(elements):
+#     if i % 2 == 0:
+#       new_list.append(el)
+
+#   return new_list
+
+# print(skip_elements(fruits))
+
+# List comprehension "listcomps" is brackets with an expression followed by for or if statements
+# lst2 = []
+# for x in range(1,11):
+#   lst2.append(x*7)
+
+# print(lst2)
+
+# multiples = [x*7 for x in range(1,11)]
+# print(multiples)
+
+
+# #################################
+# Lists and Tuples Operations Cheat Sheet
+# Lists and Tuples Operations Cheat Sheet
+
+# Lists and tuples are both sequences, so they share a number of sequence operations. But, because lists are mutable, there are also a number of methods specific just to lists. This cheat sheet gives you a run down of the common operations first, and the list-specific operations second.
+# Common sequence operations
+
+#     len(sequence) Returns the length of the sequence
+#     for element in sequence Iterates over each element in the sequence
+#     if element in sequence Checks whether the element is part of the sequence
+#     sequence[i] Accesses the element at index i of the sequence, starting at zero
+#     sequence[i:j] Accesses a slice starting at index i, ending at index j-1. If i is omitted, it's 0 by default. If j is omitted, it's len(sequence) by default.
+#     for index, element in enumerate(sequence) Iterates over both the indexes and the elements in the sequence at the same time
+
+# Check out the official documentation for sequence operations.
+# List-specific operations and methods
+
+#     list[i] = x Replaces the element at index i with x
+#     list.append(x) Inserts x at the end of the list
+#     list.insert(i, x) Inserts x at index i
+#     list.pop(i) Returns the element a index i, also removing it from the list. If i is omitted, the last element is returned and removed.
+#     list.remove(x) Removes the first occurrence of x in the list
+#     list.sort() Sorts the items in the list
+#     list.reverse() Reverses the order of items of the list
+#     list.clear() Removes all the items of the list
+#     list.copy() Creates a copy of the list
+#     list.extend(other_list) Appends all the elements of other_list at the end of list
+
+# Most of these methods come from the fact that lists are mutable sequences. For more info, see the official documentation for mutable sequences and the list specific documentation.
+# List comprehension
+
+#     [expression for variable in sequence] Creates a new list based on the given sequence. Each element is the result of the given expression.
+
+#     [expression for variable in sequence if condition] Creates a new list based on the given sequence. Each element is the result of the given expression; elements only get added if the condition is true. 
+#     ###################################
+
+# rep = 'string1string2'
+
+# print(rep.replace('string1','string2'))
+
+# Practice Quiz: Lists
+# 3.
+# Question 3
+
+# The permissions of a file in a Linux system are split into three sets of three permissions: read, write, and execute for the owner, group, and others. Each of the three values can be expressed as an octal number summing each permission, with 4 corresponding to read, 2 to write, and 1 to execute. Or it can be written with a string using the letters r, w, and x or - when the permission is not granted. For example: 640 is read/write for the owner, read for the group, and no permissions for the others; converted to a string, it would be: "rw-r-----" 755 is read/write/execute for the owner, and read/execute for group and others; converted to a string, it would be: "rwxr-xr-x" Fill in the blanks to make the code convert a permission in octal format into a string format. 
+
+def octal_to_string(octal):
+  result = ""
+  value_letters = [(4,'r'), (2,'w'), (1,'x')]
+
+  for digit in [int(num) for num in str(octal)]:
+    for value, letter in value_letters:
+      print(value, letter)
+      if digit >= value: 
+        digit -= value
+        result += letter
+      else:
+        result += '-'
+  return result
+#   answer = [num for num in str(octal)]
+#   for digit in [num for num in str(octal)]:
+#     print(digit)
+#   print(answer)
+
+print(octal_to_string(755))
+print(octal_to_string(644))
+print(octal_to_string(640))
