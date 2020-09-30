@@ -385,24 +385,103 @@ fruits = ['apple', 'pear', 'banana']
 
 # The permissions of a file in a Linux system are split into three sets of three permissions: read, write, and execute for the owner, group, and others. Each of the three values can be expressed as an octal number summing each permission, with 4 corresponding to read, 2 to write, and 1 to execute. Or it can be written with a string using the letters r, w, and x or - when the permission is not granted. For example: 640 is read/write for the owner, read for the group, and no permissions for the others; converted to a string, it would be: "rw-r-----" 755 is read/write/execute for the owner, and read/execute for group and others; converted to a string, it would be: "rwxr-xr-x" Fill in the blanks to make the code convert a permission in octal format into a string format. 
 
-def octal_to_string(octal):
-  result = ""
-  value_letters = [(4,'r'), (2,'w'), (1,'x')]
+# def octal_to_string(octal):
+#   result = ""
+#   value_letters = [(4,'r'), (2,'w'), (1,'x')]
 
-  for digit in [int(num) for num in str(octal)]:
-    for value, letter in value_letters:
-      print(value, letter)
-      if digit >= value: 
-        digit -= value
-        result += letter
+#   for digit in [int(num) for num in str(octal)]:
+#     for value, letter in value_letters:
+#       print(value, letter)
+#       if digit >= value: 
+#         digit -= value
+#         result += letter
+#       else:
+#         result += '-'
+#   return result
+# #   answer = [num for num in str(octal)]
+# #   for digit in [num for num in str(octal)]:
+# #     print(digit)
+# #   print(answer)
+
+# print(octal_to_string(755))
+# print(octal_to_string(644))
+# print(octal_to_string(640))
+
+# files = {'jpg': 10, 'csv': 5, 'png': 25}
+# print(files)
+# print(files.keys())
+# print(files.values())
+# print(files.items())
+
+# Use dictionaries when you plan on searching for a specific element
+# for...in automatically goes through a dictionary's keys
+
+# wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
+# for item, colors in wardrobe.items():
+#   # for color in wardrobe.items():
+#     # print("{} {}".format(item))
+#     print(item)
+#     print(colors)
+
+# output should be: 
+# "red shirt"
+# "blue shirt"
+# "white shirt"
+# "blue jeans"
+
+# Dictionary Methods Cheat Sheet
+
+# Definition
+
+# x = {key1:value1, key2:value2}
+
+# Operations
+
+#     len(dictionary) - Returns the number of items in the dictionary
+#     for key in dictionary - Iterates over each key in the dictionary
+#     for key, value in dictionary.items() - Iterates over each key,value pair in the dictionary
+#     if key in dictionary - Checks whether the key is in the dictionary
+#     dictionary[key] - Accesses the item with key key of the dictionary
+#     dictionary[key] = value - Sets the value associated with key
+#     del dictionary[key] - Removes the item with key key from the dictionary
+
+# Methods
+
+#     dict.get(key, default) - Returns the element corresponding to key, or default if it's not present
+#     dict.keys() - Returns a sequence containing the keys in the dictionary
+#     dict.values() - Returns a sequence containing the values in the dictionary
+#     dict.update(other_dictionary) - Updates the dictionary with the items coming from the other dictionary. Existing entries will be replaced; new entries will be added.
+#     dict.clear() - Removes all the items of the dictionary
+
+
+# Question 2
+
+# The groups_per_user function receives a dictionary, which contains group names with the list of users. Users can belong to multiple groups. Fill in the blanks to return a dictionary with the users as keys and a list of their groups as values. 
+
+def groups_per_user(group_dictionary):
+  user_groups = {}
+  # Go through group_dictionary
+  for group, users in group_dictionary.items():
+    # Now go through the users in the group
+    for user in users:
+      # Now add the group to the the list of
+# groups for this user, creating the entry
+# in the dictionary if necessary
+      if user not in user_groups:
+        user_groups[user] = []
+        user_groups[user].append(group)
+        print(user_groups)
+      # if user not in user_groups:
+      #   user_groups[user] = []
+      #   user_groups[user].append(group)
+      #   print(user_groups)
       else:
-        result += '-'
-  return result
-#   answer = [num for num in str(octal)]
-#   for digit in [num for num in str(octal)]:
-#     print(digit)
-#   print(answer)
+        user_groups[user].append(group)
+        print('else',user_groups)
+  return(user_groups)
 
-print(octal_to_string(755))
-print(octal_to_string(644))
-print(octal_to_string(640))
+print(groups_per_user(
+  {"local":          ["admin", "userA"],
+   "public":         ["admin", "userB"],
+   "administrator":  ["admin"] }))
+
