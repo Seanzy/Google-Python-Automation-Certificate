@@ -541,10 +541,10 @@ fruits = ['apple', 'pear', 'banana']
 
 
 # 9.
-colors = ["red", "white", "blue"]
-colors.insert(2, "yellow")
+# colors = ["red", "white", "blue"]
+# colors.insert(2, "yellow")
 
-print(colors)
+# print(colors)
 
 
 # 3.
@@ -608,3 +608,37 @@ print(colors)
 # # changes made in dict2 
 # print(dict1)
 # print(dict2) 
+
+# 9/30/30 Object Oriented Programming
+
+# print(dir(""))
+# print(dir(list))
+# help(str)
+
+# a = 1
+# b = 2
+
+# print(a,b)
+
+# a,b = a+b, a+b
+# print(a,b)
+
+# dic1 = {'a':1, 'b':2}
+# dic2 = {'c':3, 'd':4}
+
+heights = {'Sean': 75, 'Dad': 72, 'John': 68}
+tall = {name:inches for (name, inches) in heights.items() if inches >= 70}
+tall2 = {name for (name) in heights.items()}
+print(tall)
+print(tall2)
+
+# heights = {'John': 175, 'Jane': 150, 'Jim': 155, 'Matt': 170}
+
+# tall = {key:value for (key, value) in heights.items() if value >= 170}
+
+# print(tall)
+
+name = 'Joe'
+age = 55
+
+print(f"Hi {name}, you are {age} years old")
