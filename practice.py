@@ -458,30 +458,153 @@ fruits = ['apple', 'pear', 'banana']
 
 # The groups_per_user function receives a dictionary, which contains group names with the list of users. Users can belong to multiple groups. Fill in the blanks to return a dictionary with the users as keys and a list of their groups as values. 
 
-def groups_per_user(group_dictionary):
-  user_groups = {}
-  # Go through group_dictionary
-  for group, users in group_dictionary.items():
-    # Now go through the users in the group
-    for user in users:
-      # Now add the group to the the list of
-# groups for this user, creating the entry
-# in the dictionary if necessary
-      if user not in user_groups:
-        user_groups[user] = []
-        user_groups[user].append(group)
-        print(user_groups)
-      # if user not in user_groups:
-      #   user_groups[user] = []
-      #   user_groups[user].append(group)
-      #   print(user_groups)
-      else:
-        user_groups[user].append(group)
-        print('else',user_groups)
-  return(user_groups)
+# def groups_per_user(group_dictionary):
+#   user_groups = {}
+#   # Go through group_dictionary
+#   for group, users in group_dictionary.items():
+#     # Now go through the users in the group
+#     for user in users:
+#       # Now add the group to the the list of
+# # groups for this user, creating the entry
+# # in the dictionary if necessary
+#       if user not in user_groups:
+#         user_groups[user] = []
+#         user_groups[user].append(group)
+#         print(user_groups)
+#       # if user not in user_groups:
+#       #   user_groups[user] = []
+#       #   user_groups[user].append(group)
+#       #   print(user_groups)
+#       else:
+#         user_groups[user].append(group)
+#         print('else',user_groups)
+#   return(user_groups)
 
-print(groups_per_user(
-  {"local":          ["admin", "userA"],
-   "public":         ["admin", "userB"],
-   "administrator":  ["admin"] }))
+# print(groups_per_user(
+#   {"local":          ["admin", "userA"],
+#    "public":         ["admin", "userB"],
+#    "administrator":  ["admin"] }))
 
+
+# 7.
+# Question 7
+# Refactor this using list comprehensions
+
+# Use a dictionary to count the frequency of letters in the input string. Only letters should be counted, not blank spaces, numbers, or punctuation. Upper case should be considered the same as lower case. For example, count_letters("This is a sentence.") should return {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}. 
+
+# def count_letters(text):
+#   result = {}
+#   text = text.lower()
+#   # print(text);
+#   # Go through each letter in the text
+#   for letter in text:
+#     # Check if the letter needs to be counted or not
+#     if letter.isalpha():
+#     # Add or increment the value in the dictionary
+#       if letter not in result:
+#         result[letter] = 1
+#       else: 
+#         result[letter] += 1
+#   return result
+
+# print(count_letters("AaBbCc"))
+# # Should be {'a': 2, 'b': 2, 'c': 2}
+
+# print(count_letters("Math is fun! 2+2=4"))
+# # Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+# print(count_letters("This is a sentence."))
+# # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+# def highlight_word(sentence, word):
+#   # return((' ').join([piece.upper() in sentence if piece == word]))
+#   print([piece.upper() for piece in sentence.split() if piece == word])
+
+# print(highlight_word("Have a nice day", "nice"))
+# print(highlight_word("Shhh, don't be so loud!", "loud"))
+# print(highlight_word("Automating with Python is fun", "fun"))
+
+# Module 4
+
+# 2.
+# Question 2
+
+# The highlight_word function changes the given word in a sentence to its upper-case version. For example, highlight_word("Have a nice day", "nice") returns "Have a NICE day". Can you write this function in just one line? 
+
+# def highlight_word(sentence, word):
+#   # return((' ').join([piece.upper() for piece in sentence if piece == word]))
+#   print(sentence.split().index(word))
+
+# print(highlight_word("Have a nice day", "nice"))
+# print(highlight_word("Shhh, don't be so loud!", "loud"))
+# print(highlight_word("Automating with Python is fun", "fun"))
+
+
+# 9.
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+
+print(colors)
+
+
+# 3.
+# Question 3
+
+# A professor with two assistants, Jamie and Drew, wants an attendance list of the students, in the order that they arrived in the classroom. Drew was the first one to note which students arrived, and then Jamie took over. After the class, they each entered their lists into the computer and emailed them to the professor, who needs to combine them into one, in the order of each student's arrival. Jamie emailed a follow-up, saying that her list is in reverse order. Complete the steps to combine them into one list as follows: the contents of Drew's list, followed by Jamie's list in reverse order, to get an accurate list of the students as they arrived.
+
+# def combine_lists(list1, list2):
+#   # Generate a new list containing the elements of list2
+#   list3 = list2
+#   # Followed by the elements of list1 in reverse order
+#   # list4 = [list3.append(el) for el in list1]
+#   print(list(reversed(list1)))
+#   print(list3 + list(reversed(list1)))
+  
+# Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
+# Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
+
+# print(combine_lists(Jamies_list, Drews_list))
+
+
+# 6.Taylor and Rory are hosting a party. They sent out invitations, and each one collected responses into dictionaries, with names of their friends and how many guests each friend is bringing. Each dictionary is a partial list, but Rory's list has more current information about the number of guests. Fill in the blanks to combine both dictionaries into one, with each friend listed only once, and the number of guests from Rory's dictionary taking precedence, if a name is included in both dictionaries. Then print the resulting dictionary.
+
+# def combine_guests(guests1, guests2):
+#   result = {}
+#   # Combine both dictionaries into one, with each key listed 
+#   # only once, and the value from guests1 taking precedence
+#   guests2.update(guests1)
+#   # print(guests2)
+#   return guests2
+# Rorys_guests = { "Adam":2, "Brenda":3, "David":1, "Jose":3, "Charlotte":2, "Terry":1, "Robert":4}
+# Taylors_guests = { "David":4, "Nancy":1, "Robert":2, "Adam":1, "Samantha":3, "Chris":5}
+
+# print(combine_guests(Rorys_guests, Taylors_guests))
+
+
+
+# Python code to merge dict using a single  
+# expression 
+# def Merge(dict1, dict2): 
+#     res = {**dict1, **dict2} 
+#     return res 
+      
+# # Driver code 
+# dict1 = {'a': 10, 'b': 8} 
+# dict2 = {'a': 6, 'c': 4} 
+# dict3 = Merge(dict1, dict2) 
+# print(dict3) 
+
+
+# def Merge(dict1, dict2): 
+#     return(dict1.update(dict2)) 
+      
+# # Driver code 
+# dict1 = {'a': 10, 'b': 8} 
+# dict2 = {'d': 6, 'c': 4} 
+  
+# # This return None 
+# print(Merge(dict1, dict2)) 
+  
+# # changes made in dict2 
+# print(dict1)
+# print(dict2) 
