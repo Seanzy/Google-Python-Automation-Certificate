@@ -19,3 +19,5 @@ I learned you can use comprehensions on dictionaries
 
 I learned about f-strings
 
+10/2/20
+Learned about constructors, __init__ and __str__, docstrings, help(), touched on Jupyter Notebooks 

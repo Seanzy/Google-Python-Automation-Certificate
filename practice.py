@@ -643,14 +643,54 @@ fruits = ['apple', 'pear', 'banana']
 
 # print(f"Hi {name}, you are {age} years old")
 
-class Dog():
-  name = ''
-  age = 7
+# class Dog():
+#   name = ''
+#   age = 7
 
-  def bark(self):
-    print('woof woof my name is {}'.format(self.name))
+#   def bark(self):
+#     print('woof woof my name is {}'.format(self.name))
 
-spot = Dog()
-spot.name = 'sean'
-spot.bark() 
-print(spot.name, spot.age)
+# spot = Dog()
+# spot.name = 'sean'
+# spot.bark() 
+# print(spot.name, spot.age)
+
+# 10/2/20 Constructors and __init__
+
+# class Apple:
+#   """Creates an Apple instance with 2 params, color and flavor"""
+#   def __init__(self, color, flavor):
+#     self.color = color
+#     self.flavor = flavor
+#   def __str__(self):
+#     return "I am a {} apple".format(self.color)
+
+# gala = Apple('red', 'sweet')
+# print(gala)
+
+# print(gala.color, gala.flavor)
+
+# help(Apple)
+
+# Classes and Methods cheat sheat
+# Classes and Instances
+
+#     Classes define the behavior of all instances of a specific class.
+#     Each variable of a specific class is an instance or object.
+#     Objects can have attributes, which store information about the object.
+#     You can make objects do work by calling their methods.
+#     The first parameter of the methods (self) represents the current instance.
+#     Methods are just like functions, but they can only be used through a class.
+
+# Special methods
+
+#     Special methods start and end with __.
+#     Special methods have specific names, like __init__ for the constructor or __str__ for the conversion to string.
+
+# Documenting classes, methods and functions
+
+#     You can add documentation to classes, methods, and functions by using docstrings right after the definition. Like this:
+
+dog = 'dog'
+
+print('cat', dog)
