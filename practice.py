@@ -626,11 +626,11 @@ fruits = ['apple', 'pear', 'banana']
 # dic1 = {'a':1, 'b':2}
 # dic2 = {'c':3, 'd':4}
 
-heights = {'Sean': 75, 'Dad': 72, 'John': 68}
-tall = {name:inches for (name, inches) in heights.items() if inches >= 70}
-tall2 = {name for (name) in heights.items()}
-print(tall)
-print(tall2)
+# heights = {'Sean': 75, 'Dad': 72, 'John': 68}
+# tall = {name:inches for (name, inches) in heights.items() if inches >= 70}
+# tall2 = {name for (name) in heights.items()}
+# print(tall)
+# print(tall2)
 
 # heights = {'John': 175, 'Jane': 150, 'Jim': 155, 'Matt': 170}
 
@@ -638,7 +638,19 @@ print(tall2)
 
 # print(tall)
 
-name = 'Joe'
-age = 55
+# name = 'Joe'
+# age = 55
 
-print(f"Hi {name}, you are {age} years old")
+# print(f"Hi {name}, you are {age} years old")
+
+class Dog():
+  name = ''
+  age = 7
+
+  def bark(self):
+    print('woof woof my name is {}'.format(self.name))
+
+spot = Dog()
+spot.name = 'sean'
+spot.bark() 
+print(spot.name, spot.age)

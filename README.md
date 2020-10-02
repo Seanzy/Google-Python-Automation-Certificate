@@ -11,3 +11,11 @@ Passing Practice Quiz: Dictionaries
 10/1/20
 Object oriented programming
 Classes
+
+
+In addition to learning about classes, I learned you can use a tuple to swap or change var values without having to declare a new variable
+
+I learned you can use comprehensions on dictionaries 
+
+I learned about f-strings
+
