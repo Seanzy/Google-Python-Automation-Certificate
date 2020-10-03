@@ -691,6 +691,80 @@ fruits = ['apple', 'pear', 'banana']
 
 #     You can add documentation to classes, methods, and functions by using docstrings right after the definition. Like this:
 
-dog = 'dog'
+# dog = 'dog'
 
-print('cat', dog)
+# print('cat', dog)
+
+# class Clothing:
+#   material: ""
+#   def __init__(self, name):
+#     self.name = name
+#   # def __str__(self):
+#   #   return f"This {self.name} is made of {self.material}"
+#   def checkmaterial(self):
+#     print (f"This {self.name} is made of {self.material}")
+
+# class Shirt(Clothing):
+#   material = "cotton"
+
+# polo = Shirt("Polo")
+
+# print(polo.checkmaterial())
+
+# class Clothing:
+#   material = ""
+#   def __init__(self,name):
+#     self.name = name
+#   def checkmaterial(self):
+#     print("This {} is made of {}".format(self.name,self.material))
+      
+# class Shirt(Clothing):
+#   material="Cotton"
+
+# polo = Shirt("Polo")
+# polo.checkmaterial()
+
+# class Clothing:
+#   stock={ 'name': [],'material' :[], 'amount':[]}
+#   def __init__(self,name):
+#     material = ""
+#     self.name = name
+#   def add_item(self, name, material, amount):
+#     Clothing.stock['name'].append(self.name)
+#     Clothing.stock['material'].append(self.material)
+#     Clothing.stock['amount'].append(amount)
+#   def Stock_by_Material(self, material):
+#     count=0
+#     n=0
+#     for item in Clothing.stock['material']:
+#       if item == material:
+#         count += Clothing.stock['amount'][n]
+#         print(Clothing.stock['amount'])
+#         n+=1
+#     return count
+
+# class shirt(Clothing):
+#   material="Cotton"
+# class pants(Clothing):
+#   material="Cotton"
+  
+# polo = shirt("Polo")
+# sweatpants = pants("Sweatpants")
+# polo.add_item(polo.name, polo.material, 4)
+# sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
+# current_stock = polo.Stock_by_Material("Cotton")
+# print(current_stock)
+
+# # Why do we need n=0 and n+=1? Ah, because the amounts are in a list format, so each time add_item() is called, the amount of that item is added to the list, and we use n to keep track of where 
+
+import random
+import datetime
+
+print(random.randint(1,10))
+now = datetime.datetime.now()
+
+print(now)
+
+help(datetime.datetime)
+
+print(now + datetime.timedelta(28))
