@@ -757,14 +757,22 @@ fruits = ['apple', 'pear', 'banana']
 
 # # Why do we need n=0 and n+=1? Ah, because the amounts are in a list format, so each time add_item() is called, the amount of that item is added to the list, and we use n to keep track of where 
 
-import random
-import datetime
+# import random
+# import datetime
 
-print(random.randint(1,10))
-now = datetime.datetime.now()
+# print(random.randint(1,10))
+# now = datetime.datetime.now()
 
-print(now)
+# print(now)
 
-help(datetime.datetime)
+# help(datetime.datetime)
 
-print(now + datetime.timedelta(28))
+# print(now + datetime.timedelta(28))
+
+# import numpy
+# import pandas
+
+# 10/4/20 Week 6
+# Writing a script from the ground up
+
+# We need to process a list of Event objects using their attributes to generate a report that lists all users currently logged in to the machines.
