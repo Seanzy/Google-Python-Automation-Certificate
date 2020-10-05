@@ -796,3 +796,23 @@ fruits = ['apple', 'pear', 'banana']
 
 # if newset == set([]):
 #   print(True)
+
+# Codewars Practice
+def DNA_strand(dna):
+    pairs = {'A': 'T', 'T':'A', 'G':'C', 'C':'G'}
+    return ('').join([pairs[letter] for letter in dna])
+
+# Test.assert_equals(DNA_strand("AAAA"),"TTTT","String AAAA is")
+# Test.assert_equals(DNA_strand("ATTGC"),"TAACG","String ATTGC is")
+# Test.assert_equals(DNA_strand("GTAT"),"CATA","String GTAT is")
+
+print(DNA_strand("AAAA"))
+print(DNA_strand("ATTGC"))
+print(DNA_strand("GTAT"))
+
+# wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
+# for item, colors in wardrobe.items():
+#   # for color in wardrobe.items():
+#     # print("{} {}".format(item))
+#     print(item)
+#     print(colors)
