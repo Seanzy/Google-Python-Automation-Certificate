@@ -23,4 +23,10 @@ I learned about f-strings
 Learned about constructors, __init__ and __str__, docstrings, help(), completed and passed my first Jupyter Notebook (Class Elevator) 
 Week 5 was a good week. I learned to always initialize mutable attributes in the constructor. I learned when to initialize attributes in the constructor instead of in the class. We initialize attributes in the constructor when we want each instance of the class to have its own unique/independent attribute instead of all instances sharing a single attribute
 
-Learned about modules, 
+Learned about modules and importance of pandas and numpy modules in finance
+
+10/4/20
+Writing a script from the ground up
+Learned about sort() and sorted(), sort modifies the existing list it's called on, and sorted returns a new list 
+
+Passing module 6

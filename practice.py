@@ -775,4 +775,24 @@ fruits = ['apple', 'pear', 'banana']
 # 10/4/20 Week 6
 # Writing a script from the ground up
 
+# First, we restate the problem in specific terms:
 # We need to process a list of Event objects using their attributes to generate a report that lists all users currently logged in to the machines.
+
+# Then we need to research all the tools available to help us solve the problem
+
+# nums = [5, 15, 54, 504]
+# nums.sort()
+
+# print(nums)
+
+# names = ['act', 'cats', 'bared']
+# # names2 = names.sorted()
+# print(sorted(names))
+# # nums2 = nums.sorted()
+# # print(nums2.sorted())
+# print(sorted(names, key=len))
+
+# newset = set(['a'])
+
+# if newset == set([]):
+#   print(True)
