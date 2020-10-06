@@ -30,3 +30,6 @@ Writing a script from the ground up
 Learned about sort() and sorted(), sort modifies the existing list it's called on, and sorted returns a new list 
 
 Passing module 6
+
+10/5/20 Almost done with Final Project
+Learned about str.translate and str.maketrans
