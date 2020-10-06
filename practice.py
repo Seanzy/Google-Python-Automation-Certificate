@@ -798,17 +798,21 @@ fruits = ['apple', 'pear', 'banana']
 #   print(True)
 
 # Codewars Practice
-def DNA_strand(dna):
-    pairs = {'A': 'T', 'T':'A', 'G':'C', 'C':'G'}
-    return ('').join([pairs[letter] for letter in dna])
+# def DNA_strand(dna):
+#     # pairs = {'A': 'T', 'T':'A', 'G':'C', 'C':'G'}
+#     # return ('').join([pairs[letter] for letter in dna])
+#     tab = dna.maketrans("A","B")
+#     print(tab)
+#     # return dna.translate(maketrans("A","B"))
 
-# Test.assert_equals(DNA_strand("AAAA"),"TTTT","String AAAA is")
-# Test.assert_equals(DNA_strand("ATTGC"),"TAACG","String ATTGC is")
-# Test.assert_equals(DNA_strand("GTAT"),"CATA","String GTAT is")
 
-print(DNA_strand("AAAA"))
-print(DNA_strand("ATTGC"))
-print(DNA_strand("GTAT"))
+# # Test.assert_equals(DNA_strand("AAAA"),"TTTT","String AAAA is")
+# # Test.assert_equals(DNA_strand("ATTGC"),"TAACG","String ATTGC is")
+# # Test.assert_equals(DNA_strand("GTAT"),"CATA","String GTAT is")
+
+# # print(DNA_strand("AAAA"))
+# print(DNA_strand("ATTGC"))
+# # print(DNA_strand("GTAT"))
 
 # wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
 # for item, colors in wardrobe.items():
@@ -816,3 +820,45 @@ print(DNA_strand("GTAT"))
 #     # print("{} {}".format(item))
 #     print(item)
 #     print(colors)
+
+# 10/5/20 Final Project
+
+# Create a dictionary with words and word frequencies that can be passed to the generate_from_frequencies function of the WordCloud class.
+
+# Write a function in the cell below that iterates through the words in file_contents, removes punctuation, and counts the frequency of each word. Oh, and be sure to make it ignore word case, words that do not contain all alphabets and boring words like "and" or "the". Then use it in the generate_from_frequencies function to generate your very own word cloud!
+
+# Hint: Try storing the results of your iteration in a dictionary before passing them into wordcloud via the generate_from_frequencies function
+
+# words = "CHAPTER 1 Investment versus Speculation: Results to Be Expected by the Intelligent Investor This chapter will outline the viewpoints that will be set forth in the remainder of the book. In particular we wish to develop at the outset our concept of appropriate portfolio policy for the individual, nonprofessional investor. Investment versus Speculation What do we mean by 'investor'? Throughout this book the term will be used in contradistinction to 'speculator.' As far back as 1934, in our textbook Security Analysis,1 we attempted a precise"
+words = "CHAPTER 1 Investment versus Speculation: book. individual, nonprofessional investor. what 'investor'?  'speculator.' As far back as 1934, we attempted a precise"
+
+# punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+# uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
+# # print(words)
+# new_words = []
+
+lowered_words = words.lower().split()
+print(lowered_words)
+
+# for word in lowered_words:
+#   if not word.isalpha():
+#     for 
+# lowered_words2 =  lowered_words.replace('c','d')
+# print(lowered_words2)
+
+# iterate over each word in words, lower it, make sure it's not boring, strip it of puncs using replace and push returned word into list, count it in dictionary, 
+
+word = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+word4 = 'dslakfjdsafkjldasklfjjdsalkf'
+# puncs = 'abc'
+# word4 = 'def'
+puncs_table = word.maketrans(puncs,word4)
+print(puncs_table)
+word5 = word.translate(puncs_table)
+print(word5)
+# help(str.translate)
+
+word6 = ('').join([' ' for num in range(1,29)])
+print(word6)
