@@ -837,7 +837,7 @@ words = "didn't CHAPTER 1 Investment versus Speculation: Results to Be Expected 
 
 uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
 # # print(words)
-puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 # puncs_replacement = '                            ' 
 # word4 replaces all 28 chars of punctuations with ''
 # puncs_table = ''.maketrans(puncs,puncs_replacement)
@@ -902,9 +902,9 @@ puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 # print(words)
 
-for char in words:
-  if char in puncs:
-    words = words.replace(char, '')
+# for char in words:
+#   if char in puncs:
+#     words = words.replace(char, '')
 
 # print(words)
 
@@ -913,20 +913,82 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # words = "didn't C'HAPTER 1 I'"
   
 # printing original string 
-print(words) 
+# print(words) 
   
-# initializing punctuations string  
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+# # initializing punctuations string  
+# punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
-for letter in punc:
-  words = words.replace(letter, '')
+# for letter in punc:
+#   words = words.replace(letter, '')
   
-# # Removing punctuations in string 
-# # Using loop + punctuation string 
-for letter in words:  
-    if letter in punc:  
-        words = words.replace(letter, "")
-        print(words)
+# # # Removing punctuations in string 
+# # # Using loop + punctuation string 
+# for letter in words:  
+#     if letter in punc:  
+#         words = words.replace(letter, "")
+#         print(words)
   
-# printing result  
-print(words)  
+# # printing result  
+# print(words)  
+
+print(words)
+wordslist = []
+frequencies = {} 
+
+for letter in words:
+    if letter in punctuations:
+        words = words.replace(letter, '').lower()
+
+splitwords = words.split()
+
+for word in splitwords:
+  if word not in uninteresting_words:
+    if word not in frequencies:
+      frequencies[word] = 1
+    else:
+      frequencies[word] += 1
+
+print(frequencies)
+
+
+def freq(stuff):
+  return stuff
+
+print(freq('ssd'))
+
+
+
+
+
+
+
+    print('sean')
+    # LEARNER CODE START HERE
+#     First remove punctuations from each character of the file_contents string by iterating over each char of the
+#     string and checking if the char is in the punctuations string. If it is, reassign a copy of the input string 
+#     using replace. You can also lower the word at this time. 
+#     Then check our lowered, no-punctuation string for uninteresting words. We must split the string into a list,
+#     then iterate over it to check if each word is uninteresting. If it is not, then we check if it is in our 
+#     frequencies dictionary. If it is not, initialize it to 1. If it is, increment it by 1. 
+    
+#     words = file_contents
+#     wordslist = []
+#     frequencies = {} 
+
+#     print(words)
+#     for letter in words:
+#         if letter in punctuations:
+#             words = words.replace(letter, '').lower()
+    
+#     splitwords = words.split()
+    
+#     for word in splitwords:
+#         if word not in uninteresting_words:
+#             if word not in frequencies:
+#                 frequencies[word] = 1
+#             else:
+#                 frequencies[word] += 1
+    
+#     return frequencies
+
+#     freqs = calculate_frequencies()
