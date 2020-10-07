@@ -33,3 +33,11 @@ Passing module 6
 
 10/5/20 Almost done with Final Project
 Learned about str.translate and str.maketrans
+
+10/6/20
+Learned an easy way to remove punctuation from a string:
+punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+for letter in words:  
+  if letter in punc:  
+    words = words.replace(letter, "")

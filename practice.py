@@ -829,7 +829,7 @@ fruits = ['apple', 'pear', 'banana']
 
 # Hint: Try storing the results of your iteration in a dictionary before passing them into wordcloud via the generate_from_frequencies function
 
-words = "CHAPTER 1 Investment versus Speculation: Results to Be Expected by the Intelligent Investor This chapter will outline the viewpoints that will be set forth in the remainder of the book. In particular we wish to develop at the outset our concept of appropriate portfolio policy for the individual, nonprofessional investor. Investment versus Speculation What do we mean by 'investor'? Throughout this book the term will be used in contradistinction to 'speculator.' As far back as 1934, in our textbook Security Analysis, 1 we attempted a precise"
+words = "didn't CHAPTER 1 Investment versus Speculation: Results to Be Expected by the Intelligent Investor This chapter will outline the viewpoints that will be set forth in the remainder of the book. In particular we wish to develop at the outset our concept of appropriate portfolio policy for the individual, nonprofessional investor. Investment versus Speculation What do we mean by 'investor'? Throughout this book the term will be used in contradistinction to 'speculator.' As far back as 1934, in our textbook Security Analysis, 1 we attempted a precise"
 
 # Plan: iterate over each word in words, lower it, strip it first of puncs using replace, make sure it's not uninteresting, and push returned word into list, count it in dictionary, 
 
@@ -838,26 +838,56 @@ words = "CHAPTER 1 Investment versus Speculation: Results to Be Expected by the 
 uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
 # # print(words)
 puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
-puncs_replacement = '                            ' 
+# puncs_replacement = '                            ' 
 # word4 replaces all 28 chars of punctuations with ''
-puncs_table = ''.maketrans(puncs,puncs_replacement)
+# puncs_table = ''.maketrans(puncs,puncs_replacement)
 
-cloud_words = []
-lowered_words = words.lower().split()
-print(lowered_words)
+# cloud_words = []
+# words_dictionary = {}
+# lowered_words = words.lower().split()
+# print(lowered_words)
 
-for word in lowered_words:
-  print(word)
-  no_puncs_word = word.translate(puncs_table).strip()
-  print(no_puncs_word)
-  if no_puncs_word not in uninteresting_words:
-    cloud_words.append(no_puncs_word)
-  # if not word.isalpha():
+# for word in lowered_words:
+#   print(word)
+#   no_puncs_word = word.translate(puncs_table).strip()
+#   print(no_puncs_word)
+#   if no_puncs_word not in uninteresting_words:
+#     print("Adding", no_puncs_word, len(no_puncs_word))
+#     cloud_words.append(no_puncs_word)
+#   # if not word.isalpha():
 
+# for word in cloud_words: 
+#   if word not in words_dictionary:
+#     words_dictionary[word] = 1
+#   else: 
+#     words_dictionary[word] += 1
 
-print(cloud_words)
+# print(cloud_words)
+# print(words_dictionary)
 
+# # translatestr = ('').join([' ' for num in range(1, len(puncs)+1)])
+# # print(translatestr, len(translatestr))
 
+# # word = list('abc')
+# words = ['.abc', 'd.ef', 'ghi.']
+# print(words)
+# for letter in puncs:
+#   nopuncs = [word.replace(word,word+'_') for word in words]
+# print(nopuncs)
+
+# for i, word in enumerate(words):
+#   for letter in word:
+#     if letter in puncs:
+#       print('yes')
+#       newword = word
+
+#       print(word)
+#       word = newword.replace(letter, '')
+
+# for i, word in enumerate(words):
+#   print(i, word)
+# nopuncs = [letter for letter in word.items()]
+# print(nopuncs)
 # word = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 # # puncs = 'abc'
@@ -869,3 +899,34 @@ print(cloud_words)
 
 # word6 = ('').join([' ' for num in range(1,29)])
 # print(word6)
+
+# print(words)
+
+for char in words:
+  if char in puncs:
+    words = words.replace(char, '')
+
+# print(words)
+
+words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expected by the Intelligent Investor This chapter will outline the viewpoints that will be set forth in the remainder of the book. In particular we wish to develop at the outset our concept of appropriate portfolio policy for the individual, nonprofessional investor. Investment versus Speculation What do we mean by 'investor'? Throughout this book the term will be used in contradistinction to 'speculator.' As far back as 1934, in our textbook Security Analysis, 1 we attempted a precise"
+
+# words = "didn't C'HAPTER 1 I'"
+  
+# printing original string 
+print(words) 
+  
+# initializing punctuations string  
+punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+for letter in punc:
+  words = words.replace(letter, '')
+  
+# # Removing punctuations in string 
+# # Using loop + punctuation string 
+for letter in words:  
+    if letter in punc:  
+        words = words.replace(letter, "")
+        print(words)
+  
+# printing result  
+print(words)  

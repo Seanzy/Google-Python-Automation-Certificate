@@ -8,7 +8,7 @@ nonprofessional investor.
 Investment versus Speculation
 What do we mean by "investor"? Throughout this book the
 term will be used in contradistinction to "speculator." As far back
-as 1934, in our textbook Security Analysis,1 we attempted a precise
+as 1934, in our textbook Security Analysis, 1 we attempted a precise
 formulation of the difference between the two, as follows: "An
 investment operation is one which, upon thorough analysis promises
 safety of principal and an adequate return. Operations not
