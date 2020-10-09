@@ -1036,8 +1036,18 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 input = [1, 10, 5, 4, 2, 15]
 sortedinput = sorted(input)
 
-print(input, sortedinput)
+# print(input)
+# print(sortedinput)
 
+diff = 0
+
+for i, el in enumerate(sortedinput[1:]):
+  # print('index', i)
+  if abs(el - sortedinput[i]) > diff:
+    diff = abs(el - sortedinput[i])
+  # print(i, input[i])
+    # print(diff)
+print(diff)
 
 
 
