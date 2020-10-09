@@ -71,7 +71,6 @@
 #     if is_group(member):
 #       count += count_users(member)
 #   return count
-
 # print(count_users("sales")) # Should be 3
 # print(count_users("engineering")) # Should be 8
 # print(count_users("everyone")) # Should be 18
@@ -931,39 +930,33 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # # printing result  
 # print(words)  
 
-print(words)
-wordslist = []
-frequencies = {} 
+# print(words)
+# wordslist = []
+# frequencies = {} 
 
-for letter in words:
-    if letter in punctuations:
-        words = words.replace(letter, '').lower()
+# for letter in words:
+#     if letter in punctuations:
+#         words = words.replace(letter, '').lower()
 
-splitwords = words.split()
+# splitwords = words.split()
 
-for word in splitwords:
-  if word not in uninteresting_words:
-    if word not in frequencies:
-      frequencies[word] = 1
-    else:
-      frequencies[word] += 1
+# for word in splitwords:
+#   if word not in uninteresting_words:
+#     if word not in frequencies:
+#       frequencies[word] = 1
+#     else:
+#       frequencies[word] += 1
 
-print(frequencies)
-
-
-def freq(stuff):
-  return stuff
-
-print(freq('ssd'))
+# print(frequencies)
 
 
+# def freq(stuff):
+#   return stuff
 
+# print(freq('ssd'))
 
-
-
-
-    print('sean')
-    # LEARNER CODE START HERE
+#     print('sean')
+#     LEARNER CODE START HERE
 #     First remove punctuations from each character of the file_contents string by iterating over each char of the
 #     string and checking if the char is in the punctuations string. If it is, reassign a copy of the input string 
 #     using replace. You can also lower the word at this time. 
@@ -992,3 +985,58 @@ print(freq('ssd'))
 #     return frequencies
 
 #     freqs = calculate_frequencies()
+
+
+# def calculate_frequencies(file_contents):
+#     '''Takes a txt file as input and returns a dictionary of word counts to be used to generate a word cloud '''
+#     # Here is a list of punctuations and uninteresting words you can use to process your text
+#     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+#     uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", \
+#     "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", \
+#     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", \
+#     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", \
+#     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
+#     print('sean')
+#     # LEARNER CODE START HERE
+# #     First remove punctuations from each character of the file_contents string by iterating over each char of the
+# #     string and checking if the char is in the punctuations string. If it is, reassign a copy of the input string 
+# #     using replace. You can also lower the word at this time. 
+# #     Then check our lowered, no-punctuation string for uninteresting words. We must split the string into a list,
+# #     then iterate over it to check if each word is uninteresting. If it is not, then we check if it is in our 
+# #     frequencies dictionary. If it is not, initialize it to 1. If it is, increment it by 1. 
+    
+# #     words = file_contents
+# #     wordslist = []
+# #     frequencies = {} 
+
+# #     print(words)
+# #     for letter in words:
+# #         if letter in punctuations:
+# #             words = words.replace(letter, '').lower()
+    
+# #     splitwords = words.split()
+    
+# #     for word in splitwords:
+# #         if word not in uninteresting_words:
+# #             if word not in frequencies:
+# #                 frequencies[word] = 1
+# #             else:
+# #                 frequencies[word] += 1
+    
+# #     return frequencies
+
+# #     freqs = calculate_frequencies()
+#     #wordcloud
+#     cloud = wordcloud.WordCloud()
+#     cloud.generate_from_frequencies(freqs)
+#     return cloud.to_array()
+
+
+# SB Test
+input = [1, 10, 5, 4, 2, 15]
+sortedinput = sorted(input)
+
+print(input, sortedinput)
+
+
+
