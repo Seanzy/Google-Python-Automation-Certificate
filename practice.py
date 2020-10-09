@@ -1032,7 +1032,7 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 #     return cloud.to_array()
 
 
-# SB Test
+# SB Test, sorting was the key insight
 input = [1, 10, 5, 4, 2, 15]
 sortedinput = sorted(input)
 

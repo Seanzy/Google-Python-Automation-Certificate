@@ -42,3 +42,4 @@ for letter in words:
   if letter in punc:  
     words = words.replace(letter, "")
 
+10/9/20 - A couple weeks ago, I had difficulty solving a problem with Javascript. After taking the Google Python course, I retried the problem and solved it in 15 minutes. I am going to keep going until I become a data scientist. 
