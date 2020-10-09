@@ -1033,21 +1033,83 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 
 
 # SB Test, sorting was the key insight
-input = [1, 10, 5, 4, 2, 15]
-sortedinput = sorted(input)
+# ints = [1, 10, 5, 4, 2, 15]
+# # 5
+# ints = [11, 20, 5, 45]
+# # 24
+# # ints = [11, 50, 7, 15, 35, 40, 63]
+# # 19
+# # ints = [1, 9, 5] 
+# # 4
+# lower, upper = ints[0:2]
+# # print(lower, upper)
+# badnumbers = ints[2:]
+# # print(badnumbers)
+# # print(ints, lower, upper)
+# newints = []
 
-# print(input)
-# print(sortedinput)
+# for num in ints:
+#   if num < lower or num > upper: 
+#     continue
+#   else:
+#     newints.append(num)
 
-diff = 0
+# newints = sorted(newints)
+# print(newints)
 
-for i, el in enumerate(sortedinput[1:]):
-  # print('index', i)
-  if abs(el - sortedinput[i]) > diff:
-    diff = abs(el - sortedinput[i])
-  # print(i, input[i])
-    # print(diff)
-print(diff)
+# diff = 0
+
+# for i, num in enumerate(newints[1:]):
+#   if abs(num - newints[i]) - 1 > diff:
+#     diff = abs(num - newints[i]) - 1
+
+# if abs(newints[1] - lower) > diff:
+#   diff = abs(newints[1] - lower)
+
+# if abs(newints[-2] - upper) > diff:
+#   diff = abs(newints[-2] - upper)
+
+# if len(newints) == 2:
+#   diff += 1
+
+# print(diff)
 
 
+
+# # My God that was a humbling problem.
+# nums = input().split()
+# ints = [int(num) for num in nums]
+# lower, upper = ints[0:2]
+# # print(ints)
+# # print(lower, upper)
+# badnumbers = ints[2:]
+# # print(badnumbers)
+# # print(ints, lower, upper)
+# newints = []
+
+# for num in ints:
+#   if num < lower or num > upper: 
+#     continue
+#   else:
+#     newints.append(num)
+
+# newints = sorted(newints)
+# # print(newints)
+
+# diff = 0
+
+# for i, num in enumerate(newints[1:]):
+#   if abs(num - newints[i]) - 1 > diff:
+#     diff = abs(num - newints[i]) - 1
+
+# if abs(newints[1] - lower) > diff:
+#   diff = abs(newints[1] - lower)
+
+# if abs(newints[-2] - upper) > diff:
+#   diff = abs(newints[-2] - upper)
+
+# if len(newints) == 2:
+#   diff += 1
+  
+# print(diff)
 
