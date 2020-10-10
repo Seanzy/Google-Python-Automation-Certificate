@@ -1113,3 +1113,33 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
   
 # print(diff)
 
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# First make a copy of the list
+# Then sort it, the last 3 elements will be the 3 largest integers
+# define a subset list of the 3 largest
+# iterate over the original list, checking if each element is in the subet of 3 largest, if it is, divide it by 2
+# then return 
+
+input = [1, 7, 2, 10, 20, 4]
+input = [1, 2, 3, 4, 5, 6]
+input = [6, 5, 4, 3, 2, 1]
+input = [10, 35, 4, 50, 20, 30]
+
+nums = ''
+
+halfs = [1, 3.5, 2, 5.0, 10.0, 4]
+
+halfs = [str(num) for num in halfs]
+print(7//2)
+
+# for num in halfs:
+
+#   nums += str(num)
+# print(nums)
+
+# delete space at the end? 
+
+# 
+# print("You owe ${:.2f} dollars".format(with_tax))
+# print("You owe ${:>.2f} dollars".format(with_tax))
