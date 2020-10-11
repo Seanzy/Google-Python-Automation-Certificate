@@ -45,4 +45,4 @@ for letter in words:
 10/9/20 - A couple weeks ago, I had difficulty solving a problem with Javascript. After taking the Google Python course, I retried the problem and solved it in 15 minutes. I am going to keep going until I become a data scientist. 
 
 10/11/20 - Using Python to Interact with the Operating System
-Becoming a software engineer/data scientist day 
+Becoming a software engineer/data scientist day 14
