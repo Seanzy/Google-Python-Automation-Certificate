@@ -1121,17 +1121,17 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # iterate over the original list, checking if each element is in the subet of 3 largest, if it is, divide it by 2
 # then return 
 
-input = [1, 7, 2, 10, 20, 4]
-input = [1, 2, 3, 4, 5, 6]
-input = [6, 5, 4, 3, 2, 1]
-input = [10, 35, 4, 50, 20, 30]
+# input = [1, 7, 2, 10, 20, 4]
+# input = [1, 2, 3, 4, 5, 6]
+# input = [6, 5, 4, 3, 2, 1]
+# input = [10, 35, 4, 50, 20, 30]
 
-nums = ''
+# nums = ''
 
-halfs = [1, 3.5, 2, 5.0, 10.0, 4]
+# halfs = [1, 3.5, 2, 5.0, 10.0, 4]
 
-halfs = [str(num) for num in halfs]
-print(7//2)
+# halfs = [str(num) for num in halfs]
+# print(7//2)
 
 # for num in halfs:
 
@@ -1143,3 +1143,36 @@ print(7//2)
 # 
 # print("You owe ${:.2f} dollars".format(with_tax))
 # print("You owe ${:>.2f} dollars".format(with_tax))
+
+# 10/11/20 Code warrior
+# The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, return the length of the longest vowel substring. Vowels are any of aeiou. 
+def solve(s):
+    lens = []
+    longest = 0
+    vowels = 'aeiou'
+    i = 0
+    
+    for letter in s:
+      if letter in vowels:
+        longest += 1
+      else: 
+        lens.append(longest)
+        longest = 0
+
+    print(max(lens))
+
+solve("codewarriors")
+# 2
+solve("suoidea")
+# # 3
+solve("ultrarevolutionariees")
+# # 3
+solve("strengthlessnesses")
+# # 1
+solve("cuboideonavicuare")
+# # 2
+solve("chrononhotonthuooaos")
+# # 5
+solve("iiihoovaeaaaoougjyaw")
+# 8
+
