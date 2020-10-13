@@ -1146,33 +1146,56 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 
 # 10/11/20 Code warrior
 # The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, return the length of the longest vowel substring. Vowels are any of aeiou. 
-def solve(s):
-    lens = []
-    longest = 0
-    vowels = 'aeiou'
-    i = 0
+# def solve(s):
+#     lens = []
+#     longest = 0
+#     vowels = 'aeiou'
+#     i = 0
     
-    for letter in s:
-      if letter in vowels:
-        longest += 1
-      else: 
-        lens.append(longest)
-        longest = 0
+#     for letter in s:
+#       if letter in vowels:
+#         longest += 1
+#       else: 
+#         lens.append(longest)
+#         longest = 0
 
-    print(max(lens))
+#     print(max(lens))
 
-solve("codewarriors")
-# 2
-solve("suoidea")
-# # 3
-solve("ultrarevolutionariees")
-# # 3
-solve("strengthlessnesses")
-# # 1
-solve("cuboideonavicuare")
+# solve("codewarriors")
 # # 2
-solve("chrononhotonthuooaos")
-# # 5
-solve("iiihoovaeaaaoougjyaw")
-# 8
+# solve("suoidea")
+# # # 3
+# solve("ultrarevolutionariees")
+# # # 3
+# solve("strengthlessnesses")
+# # # 1
+# solve("cuboideonavicuare")
+# # # 2
+# solve("chrononhotonthuooaos")
+# # # 5
+# solve("iiihoovaeaaaoougjyaw")
+# # 8
 
+# 10/12/20 Codewars
+# Given a sequence of characters, does "abc" appear in the CENTER of the sequence?
+
+# The sequence of characters could contain more than one "abc".
+
+# To define CENTER, the number of characters in the sequence to the left and right of the "abc" (which is in the middle) must differ by at most one.
+
+# If it is in the CENTER, return True. Otherwise, return False.
+
+# Write a function as the solution for this problem. This kata looks simple, but it might not be easy.
+def is_in_middle(sequence):
+
+  if 'abc' in sequence:
+    print('sean')
+  print(len(sequence))
+  print(len(sequence)//2)
+
+
+is_in_middle("AAAabcBB")
+is_in_middle("AabcBB")
+is_in_middle("AabcBBB")
+is_in_middle("abc")
+is_in_middle("AAabc")
