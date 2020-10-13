@@ -1186,16 +1186,60 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # If it is in the CENTER, return True. Otherwise, return False.
 
 # Write a function as the solution for this problem. This kata looks simple, but it might not be easy.
-def is_in_middle(sequence):
+# def is_in_middle(sequence):
+#   start = len(sequence) // 2 - 1
 
-  if 'abc' in sequence:
-    print('sean')
-  print(len(sequence))
-  print(len(sequence)//2)
+#   if len(sequence) % 2:
+#     # print('start', start, sequence)
+#     if sequence[start:start+3] == 'abc':
+#       print('True')
+#     else:
+#       print('False')
+#   else: 
+#     # print('even', len(sequence))
+#     # print(sequence[start:start+3])
+#     if sequence[start-1:start+2] == 'abc' or sequence[start:start+3] == 'abc':
+#       print('True')
+#     else: 
+#       print('False')
+
+def is_in_middle(s):
+  print(s)
+  while len(s)>4:
+    s = s[1:-1]
+    print(s)
+  print('abc' in s)
 
 
-is_in_middle("AAAabcBB")
-is_in_middle("AabcBB")
+# # find out index where abc begins
+# # depending on length of sequence, abc can begin at either 
+# # len // 2 - 1 or len // 2 - 2
+# # If index of abc is ...we don't know where abc begins because it could contain more than 1. So we have to check certain indexes for a, next for b, next for c, depending on len of sequence. 
+# # say sequence is 8, abc can be in indexes 2, 3, 4 or 3, 4, 5
+# # if it's odd it has to start at len(sequence) // 2 - 1
+# # if it's even it can start at -2 or - 2
+# is_in_middle("AABabcAB")
+# True
+# is_in_middle("AabcBB")
+# # True
 is_in_middle("AabcBBB")
-is_in_middle("abc")
-is_in_middle("AAabc")
+# # False
+# is_in_middle("AabcB")
+# # True
+# is_in_middle("AAabc")
+# False
+
+# def is_in_middle(sequence):
+#   middle = False
+#   start = len(sequence) // 2 - 1
+
+#   if len(sequence) % 2:
+#     if sequence[start:start+3] == 'abc':
+#       middle = True
+#     else:
+#       return middle
+#   else: 
+#     if sequence[start-1:start+2] == 'abc' or sequence[start:start+3] == 'abc':
+#       middle = True
+  
+#   return middle
