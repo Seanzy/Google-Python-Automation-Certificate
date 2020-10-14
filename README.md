@@ -46,3 +46,5 @@ for letter in words:
 
 10/11/20 - Using Python to Interact with the Operating System
 Becoming a software engineer/data scientist day 14
+
+10/13/20 - Learning python scripting
