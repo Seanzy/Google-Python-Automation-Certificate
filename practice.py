@@ -1203,12 +1203,12 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 #     else: 
 #       print('False')
 
-def is_in_middle(s):
-  print(s)
-  while len(s)>4:
-    s = s[1:-1]
-    print(s)
-  print('abc' in s)
+# def is_in_middle(s):
+#   print(s)
+#   while len(s)>4:
+#     s = s[1:-1]
+#     print(s)
+#   print('abc' in s)
 
 
 # # find out index where abc begins
@@ -1222,7 +1222,7 @@ def is_in_middle(s):
 # True
 # is_in_middle("AabcBB")
 # # True
-is_in_middle("AabcBBB")
+# is_in_middle("AabcBBB")
 # # False
 # is_in_middle("AabcB")
 # # True
@@ -1243,4 +1243,46 @@ is_in_middle("AabcBBB")
 #       middle = True
   
 #   return middle
+
+# 10/14/20 Codewars
+# Remove the parentheses
+
+# In this kata you are given a string for example:
+
+# "example(unwanted thing)example"
+
+# Your task is to remove everything inside the parentheses as well as the parentheses themselves.
+
+# The example above would return:
+
+# "exampleexample"
+
+# Other than parentheses only letters and spaces can occur in the string. Don't worry about other brackets like "[]" and "{}" as these will never appear.
+
+# I think this is an easy problem. All I have to do is find the index of the first and last parenthesis, then split the string from the beginning up to the first parenthesis and join that with the rest of the string beginning at the last parenthesis, this should be straightforward because strings are indexed in python. 
+# Researching find():
+# I remember learning about rfind() to find the last occurrence of a character in a string 
+# I almost passed all the tests but realized I didn't have a full understanding of the problem because the there can be more than 1 set of parentheses. I should have looked carefully through all the tests first to see the possible cases. Now I think a regex would be suitable because we can use a wildcard inside of parentheses. 
+# Also, what if there are no parentheses? I did a good job planning and researching this problem but didn't consider edge cases well enough and didn't plan for those well enough. I feel like you should plan well enough to know almost exactly what to write when you begin coding. Then debug for logical errors and run tests.   
+
+def remove_parentheses(s):
+  first, second = s.find('('), s.rfind(')')
+  new = s[first:second+1]
+
+  answer = s.replace(new,"")
+  return(answer)
+
+# remove_parentheses("example(unwanted thing)example")
+# "exampleexample"
+# remove_parentheses("example (unwanted thing) example")
+# # # "example  example"
+# remove_parentheses("a (bc d)e")
+# # # "a e"
+# remove_parentheses("a(b(c))")
+# # # "a"
+# remove_parentheses("hello example (words(more words) here) something")
+# # # "hello example  something"
+remove_parentheses("(first group) (second group) (third group)")
+remove_parentheses("dfgdsfgf")
+# "  "
 
