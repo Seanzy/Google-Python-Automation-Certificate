@@ -1265,24 +1265,54 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # I almost passed all the tests but realized I didn't have a full understanding of the problem because the there can be more than 1 set of parentheses. I should have looked carefully through all the tests first to see the possible cases. Now I think a regex would be suitable because we can use a wildcard inside of parentheses. 
 # Also, what if there are no parentheses? I did a good job planning and researching this problem but didn't consider edge cases well enough and didn't plan for those well enough. I feel like you should plan well enough to know almost exactly what to write when you begin coding. Then debug for logical errors and run tests.   
 
-def remove_parentheses(s):
-  first, second = s.find('('), s.rfind(')')
-  new = s[first:second+1]
+# def remove_parentheses(s):
+#   # first, second = s.find('('), s.rfind(')')
+#   # new = s[first:second+1]
 
-  answer = s.replace(new,"")
-  return(answer)
+#   # answer = s.replace(new,"")
+#   # return(answer)
 
-# remove_parentheses("example(unwanted thing)example")
-# "exampleexample"
-# remove_parentheses("example (unwanted thing) example")
-# # # "example  example"
-# remove_parentheses("a (bc d)e")
-# # # "a e"
-# remove_parentheses("a(b(c))")
-# # # "a"
-# remove_parentheses("hello example (words(more words) here) something")
-# # # "hello example  something"
-remove_parentheses("(first group) (second group) (third group)")
-remove_parentheses("dfgdsfgf")
-# "  "
+#   parens = ('(')
 
+# # remove_parentheses("example(unwanted thing)example")
+# # "exampleexample"
+# # remove_parentheses("example (unwanted thing) example")
+# # # # "example  example"
+# # remove_parentheses("a (bc d)e")
+# # # # "a e"
+# # remove_parentheses("a(b(c))")
+# # # # "a"
+# # remove_parentheses("hello example (words(more words) here) something")
+# # # # "hello example  something"
+# remove_parentheses("(first group) (second group) (third group)")
+# remove_parentheses("(first group) ) ( (third group)")
+# # "  "
+
+# 10/15/20
+
+# Given an array of numbers and an index, return the index of the least number larger than the element at the given index, or -1 if there is no such index ( or, where applicable, Nothing or a similarly empty value ).
+# Notes
+
+# Multiple correct answers may be possible. In this case, return any one of them.
+# The given index will be inside the given array.
+# The given array will, therefore, never be empty.
+# Example
+# First, lookup the value of the number at the given index
+# Then iterate over every number of the array and check if it is greater than lookup number and less than least greatest number. If it is, reassign least greatest number. 
+
+def least_larger(a, i): 
+  el = a[i]
+  least = float("inf")
+  leastindex = -1
+
+  for i, num in enumerate(a):
+    if num > el and num < least:
+      least = num
+      leastindex = i
+      
+  print(leastindex)
+  
+least_larger( [4, 1, 3, 5, 6], 0 )
+# 3
+least_larger( [4, 1, 3, 5, 6], 4 )
+# -1

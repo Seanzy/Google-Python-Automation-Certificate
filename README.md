@@ -48,3 +48,11 @@ for letter in words:
 Becoming a software engineer/data scientist day 14
 
 10/13/20 - Learning python scripting
+10/14/20 - Enrolled in Springboard, all the Python work I've done up to this point is already paying off
+Success! I remember learning about rfind() to find the last occurrence of a character in a string. 
+
+10/15/20 - started the Springboard prep-work and did another code warriors problem, still need to lookup how to do the matching parentheses problem from yesterday
+
+
+
+
