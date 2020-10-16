@@ -1329,3 +1329,31 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # 3
 # least_larger( [4, 1, 3, 5, 6], 4 )
 # -1
+
+
+# 10/16/20 Codewars Remove consecutive duplicate words
+# Your task is to remove all consecutive duplicate words from string, leaving only first words entries.
+
+# Example:
+
+# Input:
+
+# 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+
+# Output:
+
+# 'alpha beta gamma delta alpha beta gamma delta'
+# First split the string, iterate over, check if each word is same as previous, if it is, delete it from the list. Then join it back into a string with spaces
+def remove_consecutive_duplicates(s):
+  separated = s.split()
+  uniques = []
+  print(separated)
+  for i, word in enumerate(separated):
+    if separated[i-1] != word:
+      uniques.append(word)
+
+  return(uniques)
+
+print(remove_consecutive_duplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
+
+# 'alpha beta gamma delta alpha beta gamma delta'
