@@ -53,6 +53,7 @@ Success! I remember learning about rfind() to find the last occurrence of a char
 
 10/15/20 - started the Springboard prep-work and did another code warriors problem, still need to lookup how to do the matching parentheses problem from yesterday
 
+for least_larger() I solidified my understanding of list comprehensions and enumerate a little more. Also, an empty list in python is falsy, and a list that contains values is truthy. Neither type of list is actually equal to True or False, but 1 and 0 are == to True and False. I also learned about lambda functions and how they take only 1 expression and are kind of like an anonymous function, a quick and dirty way to make a function without formally using def to define one
 
 
 

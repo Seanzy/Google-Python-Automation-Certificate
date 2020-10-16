@@ -1300,19 +1300,32 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # First, lookup the value of the number at the given index
 # Then iterate over every number of the array and check if it is greater than lookup number and less than least greatest number. If it is, reassign least greatest number. 
 
-def least_larger(a, i): 
-  el = a[i]
-  least = float("inf")
-  leastindex = -1
+# def least_larger(a, i): 
+#   el = a[i]
+#   least = float("inf")
+#   leastindex = -1
 
-  for i, num in enumerate(a):
-    if num > el and num < least:
-      least = num
-      leastindex = i
-      
-  print(leastindex)
+#   for i, num in enumerate(a):
+#     if num > el and num < least:
+#       least = num
+#       leastindex = i
+
+#   print(leastindex)
+
+# Codewars solution########################
+# def least_larger(a, i):
+#   b = [x for x in a if x>a[i]]
+#   print(b)
+#   print(a.index(min(b)) if b else -1)
   
-least_larger( [4, 1, 3, 5, 6], 0 )
+
+# def least_larger(a,i):
+#   b = [num for num in a if num > a[i]]
+#   # b=[num for idx,num in enumerate(a) if num > a[i]]
+#   print(b)
+#   print(b.index(min(b)) if b else -1)
+
+# least_larger( [4, 1, 3, 5, 6], 0 )
 # 3
-least_larger( [4, 1, 3, 5, 6], 4 )
+# least_larger( [4, 1, 3, 5, 6], 4 )
 # -1
