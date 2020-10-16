@@ -1344,16 +1344,17 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 
 # 'alpha beta gamma delta alpha beta gamma delta'
 # First split the string, iterate over, check if each word is same as previous, if it is, delete it from the list. Then join it back into a string with spaces
+# My first attempt had problems with edge cases such as the first and last elements, trying a new approach rather than making one-off fixes for the edge cases
+
 def remove_consecutive_duplicates(s):
   separated = s.split()
-  uniques = []
   print(separated)
-  for i, word in enumerate(separated):
-    if separated[i-1] != word:
-      uniques.append(word)
+  return (' ').join([word for i, word in enumerate(separated) if i == 0 or word != separated[i-1]])
 
-  return(uniques)
 
 print(remove_consecutive_duplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
-
 # 'alpha beta gamma delta alpha beta gamma delta'
+
+print(remove_consecutive_duplicates('aa a aa a aa'))
+# 'aa a aa a aa'
+
