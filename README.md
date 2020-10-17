@@ -56,4 +56,10 @@ Success! I remember learning about rfind() to find the last occurrence of a char
 for least_larger() I solidified my understanding of list comprehensions and enumerate a little more. Also, an empty list in python is falsy, and a list that contains values is truthy. Neither type of list is actually equal to True or False, but 1 and 0 are == to True and False. I also learned about lambda functions and how they take only 1 expression and are kind of like an anonymous function, a quick and dirty way to make a function without formally using def to define one
 
 10/16/20 Becoming a software engineer/data scientist day 19
+Copying lists: if x is a list, then y = x refers to the same list in memory and changing a value in either x or y affects the one list they both refer to. 
+To truly copy the values of a list and make an entirely new list in memory, use y = list(x) or y = x[:]
 
+Learned how to import packages and rename them:
+from scipy.linalg import inv as my_inv
+
+Learning about numpy which is pretty cool! Numpy subsetting is useful

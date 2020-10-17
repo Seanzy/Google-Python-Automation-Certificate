@@ -1346,15 +1346,28 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # First split the string, iterate over, check if each word is same as previous, if it is, delete it from the list. Then join it back into a string with spaces
 # My first attempt had problems with edge cases such as the first and last elements, trying a new approach rather than making one-off fixes for the edge cases
 
-def remove_consecutive_duplicates(s):
-  separated = s.split()
-  print(separated)
-  return (' ').join([word for i, word in enumerate(separated) if i == 0 or word != separated[i-1]])
+# def remove_consecutive_duplicates(s):
+#   separated = s.split()
+#   print(separated)
+#   return (' ').join([word for i, word in enumerate(separated) if i == 0 or word != separated[i-1]])
 
 
-print(remove_consecutive_duplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
-# 'alpha beta gamma delta alpha beta gamma delta'
+# print(remove_consecutive_duplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))
+# # 'alpha beta gamma delta alpha beta gamma delta'
 
-print(remove_consecutive_duplicates('aa a aa a aa'))
-# 'aa a aa a aa'
+# print(remove_consecutive_duplicates('aa a aa a aa'))
+# # 'aa a aa a aa'
+import numpy as np 
 
+lst1 = [1, 2, 3]
+lst2 = [2, 4, 6]
+
+nplst1 = np.array(lst1)
+nplst2 = np.array(lst2)
+
+print(nplst1, nplst2)
+calc = nplst1 * nplst2
+print(calc)
+
+lst3 = nplst1[nplst1 > 1]
+print(lst3)
