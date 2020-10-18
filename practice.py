@@ -1357,17 +1357,28 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 
 # print(remove_consecutive_duplicates('aa a aa a aa'))
 # # 'aa a aa a aa'
-import numpy as np 
+# import numpy as np 
 
-lst1 = [1, 2, 3]
-lst2 = [2, 4, 6]
+# lst1 = [1, 2, 3]
+# lst2 = [2, 4, 6]
 
-nplst1 = np.array(lst1)
-nplst2 = np.array(lst2)
+# nplst1 = np.array(lst1)
+# nplst2 = np.array(lst2)
 
-print(nplst1, nplst2)
-calc = nplst1 * nplst2
-print(calc)
+# print(nplst1, nplst2)
+# calc = nplst1 * nplst2
+# print(calc)
 
-lst3 = nplst1[nplst1 > 1]
-print(lst3)
+# lst3 = nplst1[nplst1 > 1]
+# print(lst3)
+
+# regular list of lists
+x = [["a", "b"], ["c", "d"]]
+[x[0][0], x[1][0]]
+
+# numpy
+import numpy as np
+np_x = np.array(x)
+np_x[:,0]
+
+print(np_x)
