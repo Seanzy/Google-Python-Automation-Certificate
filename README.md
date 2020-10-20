@@ -63,3 +63,20 @@ Learned how to import packages and rename them:
 from scipy.linalg import inv as my_inv
 
 Learning about numpy which is pretty cool! Numpy subsetting is useful
+
+10/19/20 - began reading "Introduction to Algorithms a Creative Approach" by Udi Manber learned about inductive proofs and how to show that the sum of n consecutive integers from 1 to n = (n)(n+1) / 2
+
+Basically, we assume what were are trying to prove, the theorem is that s(n) = n(n+1) / 2 where s(n) is the sum of consecutive integers from 1 to n. 
+
+We show the base case which is trivial where n = 1 is true. s(1) = 1 (2) / 2 = 1. 
+
+Then we show that s(n+1) = (n+1)(n+2) / 2 which is the inductive step that makes it true for all integers from 1 to n. 
+
+But if s(n) = n(n+1) / 2 then s(n+1) = n(n+1)/2 + n+1. 
+
+For example, if s(4) = 1+2+3+4 = 10, then s(5) = s(4) + n+1 where n = 4 = 15, so s(5) = 15. 
+
+so factoring above, n(n+1)/2 + 2(n+1)/2 = (n+1)(n+2)/2, which is exactly what we were trying to prove. I think that's the gist of it.  
+started learning about basic plots with matplotlib
+
+10/20/20 started reading about data structures
