@@ -1373,12 +1373,41 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # print(lst3)
 
 # regular list of lists
-x = [["a", "b"], ["c", "d"]]
-[x[0][0], x[1][0]]
+# x = [["a", "b"], ["c", "d"]]
+# [x[0][0], x[1][0]]
 
-# numpy
-import numpy as np
-np_x = np.array(x)
-np_x[:,0]
+# # numpy
+# import numpy as np
+# np_x = np.array(x)
+# np_x[:,0]
 
-print(np_x)
+# print(np_x)
+
+
+
+# 10/20/20 Codewars Larger Product or Sum
+
+# Description
+
+# For this Kata you will be given an array of numbers and another number n. You have to find the sum of the n largest numbers of the array and the product of the n smallest numbers of the array, and compare the two.
+
+# If the sum of the n largest numbers is higher, return "sum"
+# If the product of the n smallest numbers is higher, return "product"
+# If the 2 values are equal, return "same"
+
+# Note The array will never be empty and n will always be smaller than the length of the array.
+# Example
+
+def sumOrProduct(arr, n):
+  print(arr)
+  srted = sorted(arr)
+  print(srted)
+
+  for num in srted[-n:]
+    print(num) 
+
+
+
+sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3) 
+# => "product"
+
