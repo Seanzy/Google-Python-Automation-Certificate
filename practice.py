@@ -1398,16 +1398,23 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # Note The array will never be empty and n will always be smaller than the length of the array.
 # Example
 
-def sumOrProduct(arr, n):
-  print(arr)
-  srted = sorted(arr)
-  print(srted)
+# def sumOrProduct(arr, n):
+#   print(arr)
+#   srted = sorted(arr)
+#   print(srted)
 
-  for num in srted[-n:]
-    print(num) 
+#   for num in zsrted[-n:]
+#     print(num) 
 
 
 
-sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3) 
-# => "product"
+# sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3) 
+# # => "product"
 
+import matplotlib.pyplot as plt 
+
+year = [1950, 1970, 1990, 2010]
+pop = [2.5, 3.5, 4.5, 6]
+
+plt.plot(year,pop)
+plt.show()

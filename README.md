@@ -80,3 +80,5 @@ so factoring above, n(n+1)/2 + 2(n+1)/2 = (n+1)(n+2)/2, which is exactly what we
 started learning about basic plots with matplotlib
 
 10/20/20 started reading about data structures
+
+10/21/10 learning matplotlib
