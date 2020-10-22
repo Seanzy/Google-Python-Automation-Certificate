@@ -1398,30 +1398,30 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # Note The array will never be empty and n will always be smaller than the length of the array.
 # Example
 
-def sumOrProduct(arr, n):
-  print(arr)
-  srted = sorted(arr)
-  last3 = srted[-1-n+1:]
-  first3 = srted[:3]
-  sum = 0
-  product = 1
-  print(srted)
-  print(last3)
+# def sumOrProduct(arr, n):
+#   print(arr)
+#   srted = sorted(arr)
+#   last3 = srted[-1-n+1:]
+#   first3 = srted[:3]
+#   sum = 0
+#   product = 1
+#   print(srted)
+#   print(last3)
 
-  for num in last3:
-    sum += num 
+#   for num in last3:
+#     sum += num 
 
-  for num in first3:
-    product *= num
+#   for num in first3:
+#     product *= num
 
-  if sum > product:
-    print('sum')
-  if product > sum: 
-    print('product')
-  else: 
-    print('same') 
+#   if sum > product:
+#     print('sum')
+#   if product > sum: 
+#     print('product')
+#   else: 
+#     print('same') 
 
-sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3) 
+# sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3) 
 # # => "product"
 
 # import matplotlib.pyplot as plt 
@@ -1432,3 +1432,23 @@ sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3)
 
 # plt.plot(year,pop)
 # plt.show()
+
+
+#10/22/20 sum of array singles
+# In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. Your task will be to return the sum of the numbers that occur only once.
+
+# For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers 7 and 8 occur once, and their sum is 15.
+
+# More examples in the test cases.
+
+# Good luck!
+
+def repeats(arr):
+    pass
+
+
+repeats([4,5,7,5,4,8])
+repeats([9, 10, 19, 13, 19, 13])
+repeats([16, 0, 11, 4, 8, 16, 0, 11])
+repeats([5, 17, 18, 11, 13, 18, 11, 13])
+repeats([5, 10, 19, 13, 10, 13])
