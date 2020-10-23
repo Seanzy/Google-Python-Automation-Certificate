@@ -83,4 +83,5 @@ started learning about basic plots with matplotlib
 
 10/21/10 learning matplotlib and histograms. Learned about trees, heaps, and sorting lists. 
 
-10/23/20 - preparing for apple interview
+10/23/20 - preparing for Apple interview
+Completed the Apple interview questions, cannot post here. 
