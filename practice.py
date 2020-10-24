@@ -1442,13 +1442,20 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # More examples in the test cases.
 
 # Good luck!
+import collections 
 
 def repeats(arr):
-    pass
+  counts = collections.Counter(arr)
+  sum = 0
+  nums = [num for num in counts if counts[num] == 1]
+
+  return nums[0] + nums[1]
+
+print(repeats([4,5,7,5,4,8]))
+print(repeats([9, 10, 19, 13, 19, 13]))
+print(repeats([16, 0, 11, 4, 8, 16, 0, 11]))
+print(repeats([5, 17, 18, 11, 13, 18, 11, 13]))
+print(repeats([5, 10, 19, 13, 10, 13]))
 
 
-repeats([4,5,7,5,4,8])
-repeats([9, 10, 19, 13, 19, 13])
-repeats([16, 0, 11, 4, 8, 16, 0, 11])
-repeats([5, 17, 18, 11, 13, 18, 11, 13])
-repeats([5, 10, 19, 13, 10, 13])
+
