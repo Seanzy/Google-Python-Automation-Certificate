@@ -1471,3 +1471,54 @@ words = "didn't C'HAPTER 1 I'nvestment versus Speculation: Results to Be Expecte
 # # True
 # print(consecutive([1, 6, 9, -3, 4, -78, 0], -3, 4))
 # # True
+
+
+# 10/26/20 back from vacation, matplotlib 
+# plt.scatter(gdp_cap, life_exp)
+
+# # Previous customizations
+# plt.xscale('log') 
+# plt.xlabel('GDP per Capita [in USD]')
+# plt.ylabel('Life Expectancy [in years]')
+# plt.title('World Development in 2007')
+
+# # Definition of tick_val and tick_lab
+# tick_val = [1000, 10000, 100000]
+# tick_lab = ['1k', '10k', '100k']
+
+# # Adapt the ticks on the x-axis
+# plt.xticks(tick_val, tick_lab)
+
+# # After customizing, display the plot
+# plt.show()
+
+# 10/27/20 experimenting with Pandas package
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+
+names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+dr =  [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+dpc = [1809, 1731, 1588, 218, 2200, 270, 245]
+
+# plt.scatter(cpc, dpc)
+# np_cpc = np.array(cpc)
+
+# np.hist(cpc)
+# print(2*np_cpc)
+
+names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+dr =  [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+cars_dict = { 'country':names, 'drives_right':dr, 'cars_per_cap':cpc }
+cars = pd.DataFrame(cars_dict)
+print(cars)
+
+symbols = ['AAPL', 'MSFT', 'AMZN']
+prices = [117, 213, 3254]
+ceos = ['Cook', 'Gates', 'Bezos']
+frame_dict = {'symbols':symbols, 'prices':prices, 'ceos':ceos}
+
+frame = pd.DataFrame(frame_dict)
+print(frame)
