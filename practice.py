@@ -1546,3 +1546,45 @@ print(brics,"\n")
 # print(type(brics['area']))
 # print(type(brics['population']))
 
+# Filtering pandas DataFrames
+# is_huge = brics['area'] > 8
+# print(is_huge)
+# print(brics[is_huge])
+# print('\n')
+# print(brics[brics['area'] > 8])
+
+# print(np.logical_and(brics['area']>8,brics['area']<10))
+# print(brics[np.logical_and(brics['area']>8,brics['area']<10)])
+
+# np1 = np.array([1, 2, 3])
+# np2 = np.array([4, 5, 6])
+# np3 = np.array([np1, np2, np1])
+
+# print(np3)
+# for arr in np.nditer(np3):
+#   print(arr)
+
+# in pandas, you need to specify that you want to iterate over the rows of a data frame with np.iterrows()
+# for lab, row in brics.iterrows() :
+#   print(row,'\n')
+
+# adding a column to data frame
+# for lab, row in brics.iterrows() :
+#   brics.loc[lab, "name_length"] = len(row["country"])
+
+# brics['Country'] = brics['country'].apply(str.upper)
+
+# print(brics)
+
+print(np.random.rand())
+# print(np.random.seed(123))
+print(np.random.rand())
+print(np.random.rand())
+print(np.random.rand())
+# print(np.random.seed(123))
+print(np.random.rand())
+coin = np.random.randint(0,2)
+print(coin)
+print(coin)
+
+
