@@ -1512,13 +1512,37 @@ names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'E
 dr =  [True, False, False, False, True, True, True]
 cpc = [809, 731, 588, 18, 200, 70, 45]
 cars_dict = { 'country':names, 'drives_right':dr, 'cars_per_cap':cpc }
-cars = pd.DataFrame(cars_dict)
-print(cars)
+# cars = pd.DataFrame(cars_dict)
+# print(cars)
+# print("")
 
 symbols = ['AAPL', 'MSFT', 'AMZN']
 prices = [117, 213, 3254]
 ceos = ['Cook', 'Gates', 'Bezos']
-frame_dict = {'symbols':symbols, 'prices':prices, 'ceos':ceos}
+frame_dict = {'Symbol':symbols, 'Price':prices, 'CEO':ceos}
 
-frame = pd.DataFrame(frame_dict)
-print(frame)
+# frame = pd.DataFrame(frame_dict)
+# print(frame)
+# print("")
+
+# stocks = pd.read_csv('C:\\Users\\sdgur\\Documents\\Projects\\Python Projects\\Practice\\stocks.csv')
+# # add idex_col = 0 if you don't want to treat first one differently
+# print(stocks)
+# print("")
+# print(stocks[['MSFT']])
+# print(type(stocks[['MSFT']]))
+brics = pd.read_csv('C:\\Users\\sdgur\\Documents\\Projects\\Python Projects\\Practice\\brics.csv',index_col=0)
+print(brics,"\n")
+# print(brics[1:3])
+# print(brics['country'])
+# print(brics[['country','area']])
+# print(brics[1:4])
+# print(brics.loc[['RU','SA'],['country','population']])
+# print(brics.loc[:,['country','population']])
+# print(brics.loc[['RU','SA'],:])
+# print(type(brics))
+# print(type(brics['country']))
+# print(type(brics['capital']))
+# print(type(brics['area']))
+# print(type(brics['population']))
+
