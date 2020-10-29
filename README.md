@@ -86,3 +86,5 @@ started learning about basic plots with matplotlib
 10/23/20 - preparing for Apple interview. Completed the Apple interview questions, cannot post here. 
 
 10/24/20 - completed repeats function, last night of vacation
+
+10/29/20 - making good progress. Haven't missed a day to upload to Git. Yesterday I learned about numpy, data frames, matplotlib, and Pandas modules. Really good stuff. 
