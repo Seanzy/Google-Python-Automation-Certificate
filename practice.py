@@ -1576,15 +1576,15 @@ print(brics,"\n")
 
 # print(brics)
 
-print(np.random.rand())
+# print(np.random.rand())
+# print(np.random.seed(123))
+# print(np.random.rand())
+# print(np.random.rand())
+# print(np.random.rand())
 # print(np.random.seed(123))
 print(np.random.rand())
-print(np.random.rand())
-print(np.random.rand())
-# print(np.random.seed(123))
-print(np.random.rand())
-coin = np.random.randint(0,2)
-print(coin)
-print(coin)
+# coin = np.random.randint(0,2)
+# print(coin)
+# print(coin)
 
 
