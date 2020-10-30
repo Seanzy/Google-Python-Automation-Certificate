@@ -88,3 +88,12 @@ started learning about basic plots with matplotlib
 10/24/20 - completed repeats function, last night of vacation
 
 10/29/20 - making good progress. Haven't missed a day to upload to Git. Yesterday I learned about numpy, data frames, matplotlib, and Pandas modules. Really good stuff. 
+
+Today I learned how to get Sublime working with Anaconda. I kept receiving ModuleNotFound error when I tried to import certain modules, even though I had installed them. The fix was to install the conda package in Sublime and then build with that, instead of building with pythonREPL. 
+
+Then, I had to download another package to make the build window appear on the side instead of on the bottom. 
+
+I also learned I have to use ctrl+shift+p and search for conda then activate my testenv directory for Python.
+
+I installed buildview package then restarted Sublime the reactived my testenv and now my output is displaying on the right side of the screen and in only 1 tab instead of creating a new tab every single time, which is what REPL build was doing. So I killed two birds with one stone! 
+
