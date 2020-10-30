@@ -91,9 +91,43 @@ started learning about basic plots with matplotlib
 
 Today I learned how to get Sublime working with Anaconda. I kept receiving ModuleNotFound error when I tried to import certain modules, even though I had installed them. The fix was to install the conda package in Sublime and then build with that, instead of building with pythonREPL. 
 
-Then, I had to download another package to make the build window appear on the side instead of on the bottom. 
+Then, I had to download another package (buildview) to make the build window appear on the side instead of on the bottom. 
 
 I also learned I have to use ctrl+shift+p and search for conda then activate my testenv directory for Python.
 
 I installed buildview package then restarted Sublime the reactived my testenv and now my output is displaying on the right side of the screen and in only 1 tab instead of creating a new tab every single time, which is what REPL build was doing. So I killed two birds with one stone! 
 
+Started using Anaconda Navigator. Need to see why PyCharms isn't showing up in it. Done. Had to reinstall PyCharms in the default directory and reopen Anaconda Nav. 
+
+Also started refactoring my trading programs with python, and it's way easier than using Javascript to use APIs and perform calculations. 
+
+#
+Experimenting with Jupyter Notebooks
+
+##
+10/29/20
+
+*Let's see if this works
+
+Learned that you can use ! for bash commands or 
+!pip list or %lsmagic
+
+you can use %matplotlib inline 
+
+I can start experimenting / practicing with Jupyter notebooks instead of in my editor
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 50 
+x = np.random.rand(n)
+y = np.random.rand(n)
+colors = np.random.rand(n)
+area = np.pi * (15*np.random.rand(n))**2
+
+plt.scatter(x,y,s=area,c=colors,alpha=.5)
+plt.show()
+
+
+
+Wow the Jupyter notebooks are way versatile. 
