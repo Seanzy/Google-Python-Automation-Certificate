@@ -1,3 +1,12 @@
+# import os
+# print("PYTHONPATH:", os.environ.get('PYTHONPATH'))
+# print("PATH:", os.environ.get('PATH'))
+
+import numpy as np
+import pandas as pd
+import yfinance as yf
+# import plotly.graph_objs as go
+
 # def format_name(first_name, last_name):
 #   if first_name and last_name:
 #     string = last_name + ", " + first_name
@@ -1587,4 +1596,53 @@ print(np.random.rand())
 # print(coin)
 # print(coin)
 
+# import yfinance as yf
+# new better yahoo finance API from
+# https://medium.com/@lhessani.sa
+# data = yf.download(tickers='UBER', period='5d', interval='5m')
+# print(data)
 
+# print(data[['Low']])
+
+# print(pd.DataFrame({'price': [1,2,3], 'qty':[4,5,6]}, index=[1,2,3]))
+# df = pd.DataFrame(np.random.randn(3,3))
+# df.head()
+# df2 = pd.DataFrame(np.random.randint(1,6,size=(3,3)),columns=list('ABC'))
+# print(df2)
+# print(df2.iloc[0].sum)
+
+# df = pd.DataFrame(np.random.randint(1,3,size=(3, 3)), columns=list('ABC'))
+# print(df)
+
+
+# print(pd.DataFrame({'angles': [0, 3, 4], 'degrees': [360, 180, 360]}, index=['circle', 'triangle', 'rectangle']))
+
+# help(np.random.randn)
+# help(pd.DataFrame)
+
+# 10/30/20 Reverser kata
+# Implement the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. You should do this without converting the inputted number into a string.
+
+def reverse(n):
+  num = n
+  reversed = []
+  sum = 0
+
+  while num // 10 > 0:
+    reversed.append(num % 10)
+    num = num // 10
+
+  reversed.append(num)
+
+  for tensplaceindex, digit in enumerate(reversed):
+    sum += digit * 10 ** (len(reversed) - 1 - tensplaceindex)
+
+  return sum
+
+
+print(reverse(1234))
+ # 4321)
+print(reverse(10987))
+ # 78901)
+print(reverse(1020))
+ # 201)
