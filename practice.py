@@ -1623,22 +1623,30 @@ print(np.random.rand())
 # 10/30/20 Reverser kata
 # Implement the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. You should do this without converting the inputted number into a string.
 
+# def reverse(n):
+#   num = n
+#   reversed = []
+#   sum = 0
+
+#   while num // 10 > 0:
+#     reversed.append(num % 10)
+#     num = num // 10
+
+#   reversed.append(num)
+
+#   for tensplaceindex, digit in enumerate(reversed):
+#     sum += digit * 10 ** (len(reversed) - 1 - tensplaceindex)
+
+#   return sum
+
+
+# refactored
 def reverse(n):
-  num = n
-  reversed = []
-  sum = 0
+  m = 0
 
-  while num // 10 > 0:
-    reversed.append(num % 10)
-    num = num // 10
-
-  reversed.append(num)
-
-  for tensplaceindex, digit in enumerate(reversed):
-    sum += digit * 10 ** (len(reversed) - 1 - tensplaceindex)
-
-  return sum
-
+  while n > 0:
+    n, m = n // 10, m * 10 + n % 10
+  return m
 
 print(reverse(1234))
  # 4321)
