@@ -131,3 +131,5 @@ plt.show()
 
 
 Wow the Jupyter notebooks are way versatile. 
+
+10/30/20 Halloween today. My fav holiday. Working on codewars and Springboard classes
