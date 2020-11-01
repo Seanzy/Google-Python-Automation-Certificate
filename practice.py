@@ -1591,7 +1591,7 @@ print(brics,"\n")
 # print(np.random.rand())
 # print(np.random.rand())
 # print(np.random.seed(123))
-print(np.random.rand())
+# print(np.random.rand())
 # coin = np.random.randint(0,2)
 # print(coin)
 # print(coin)
@@ -1641,16 +1641,35 @@ print(np.random.rand())
 
 
 # refactored
-def reverse(n):
-  m = 0
+# def reverse(n):
+#   m = 0
 
-  while n > 0:
-    n, m = n // 10, m * 10 + n % 10
-  return m
+#   while n > 0:
+#     n, m = n // 10, m * 10 + n % 10
+#   return m
 
-print(reverse(1234))
- # 4321)
-print(reverse(10987))
- # 78901)
-print(reverse(1020))
+# print(reverse(1234))
+#  # 4321)
+# print(reverse(10987))
+#  # 78901)
+# print(reverse(1020))
  # 201)
+
+
+# 11/1/20 Odd or Even Kata
+#Given a list of numbers, determine whether the sum of its elements is odd or even.
+
+#Give your answer as a string matching "odd" or "even".
+
+# If the input array is empty consider it as: [0] (array with a zero).
+
+def odd_or_even(arr):
+  return "odd" if sum(arr) % 2 else "even"
+
+
+print(odd_or_even([0, 1, 2]))
+  # "odd")
+print(odd_or_even([0, 1, 3]))
+  # "even")
+print(odd_or_even([1023, 1, 2]))
+  # "even")
